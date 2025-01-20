@@ -1,20 +1,34 @@
 package com.rahma.laundry
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import java.util.Calendar
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        val tanggal: TextView = findViewById(R.id.tanggal)
+        val haloTextView: TextView = findViewById(R.id.halo)
+
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        val dateFormat = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
+        val currentDate = Date()
+
+        val greeting = when (hour) {
+            in 0..11 -> "Selamat Pagi"
+            in 12..17 -> "Selamat Siang"
+            else -> "Selamat Malam"
         }
+
+        haloTextView.text = "$greeting Rahmania"
+        val formattedDate = dateFormat.format(currentDate)
+        tanggal.text = formattedDate
     }
 }
