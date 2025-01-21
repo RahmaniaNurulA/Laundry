@@ -43,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/cvakun"
         app:cardCornerRadius="12dp"
+        android:backgroundTint="#000957"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp">
@@ -55,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Estimasi Hari Ini"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
@@ -71,6 +73,7 @@
             android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/garis"
             app:layout_constraintStart_toEndOf="@id/tves"
@@ -104,6 +107,7 @@
             android:layout_height="wrap_content"
             android:text="Akun"
             android:textSize="16sp"
+            android:textColor="@color/white"
             android:textAlignment="textStart"
             app:layout_constraintTop_toBottomOf="@id/garis"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,6 +134,7 @@
             android:layout_height="wrap_content"
             android:text="Pelanggan"
             android:textSize="16sp"
+            android:textColor="@color/white"
             android:textAlignment="textStart"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvakun"
@@ -155,6 +160,7 @@
             android:layout_height="wrap_content"
             android:text="Laporan"
             android:textSize="16sp"
+            android:textColor="@color/white"
             android:textAlignment="textStart"
             app:layout_constraintTop_toBottomOf="@id/tvpelanggan"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -177,6 +183,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="#000957"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -202,6 +209,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Transaksi"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -221,6 +229,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="5dp"
+        android:backgroundTint="#000957"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -246,6 +255,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Layanan"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -265,6 +275,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="5dp"
+        android:backgroundTint="#000957"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -276,7 +287,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/tambahan"
+                android:background="@drawable/tambahan1"
                 android:contentDescription="Tambahan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -290,6 +301,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Tambahan"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -309,6 +321,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#000957"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -334,6 +347,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Pegawai"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -353,6 +367,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#000957"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -377,6 +392,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="Cabang"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
@@ -396,6 +412,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#000957"
         app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -421,6 +438,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Printer"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
