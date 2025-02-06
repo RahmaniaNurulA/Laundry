@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Laundry</string>
     <string name="idpel">ID Pelanggan</string>
     <string name="bthubungi">Hubungi</string>
-    <string name="btlihat">Lihat</string>
+    <string name="btlihat">LIhat</string>
     <string name="idpegawai">Pegawai</string>
     <string name="judulpel">Tambah Pelanggan</string>
     <string name="judulpeg">Tambah Pegawai</string>
@@ -16,10 +17,10 @@
     <string name="idlayan">ID Layanan</string>
     <string name="nama_layan">Nama Layanan</string>
     <string name="harga_layan">Harga</string>
-    <string name="validasi_nama_Pelanggan">Nama tidak boleh kosong</string>
+    <string name="validasi_nama_Pelanggan">Nama Tidak Boleh Kosong</string>
     <string name="validasi_alamat_pelanggan">Alamat Tidak Boleh Kosong</string>
     <string name="validasi_nohp_pelanggan">No HP Tidak Boleh Kosong</string>
     <string name="validasi_cabang_pelanggan">Cabang Tidak Boleh Kosong</string>
     <string name="sukses_simpan_pelanggan">Data Berhasil Disimpan</string>
-    <string name="gagal_simpan_pelanggan">Data Tidak Berhasil Disimpan</string>
+    <string name="gagal_simpan_pelanggan">Data Tidak Bisa Disimpan</string>
 </resources>

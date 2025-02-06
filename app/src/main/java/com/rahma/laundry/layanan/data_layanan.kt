@@ -1,4 +1,4 @@
-package com.rahma.laundry.pegawai
+package com.rahma.laundry.layanan
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,13 +8,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.rahma.laundry.R
+import com.rahma.laundry.pegawai.tambah_pegawai
 
-class data_pegawai : AppCompatActivity() {
-    lateinit var fabData_pegawai_Tambah: FloatingActionButton
+class data_layanan : AppCompatActivity() {
+    lateinit var fabLayanan_Tambah: FloatingActionButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_data_pegawai)
+        setContentView(R.layout.activity_data_layanan)
         init()
         tekan()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -23,13 +24,14 @@ class data_pegawai : AppCompatActivity() {
             insets
         }
     }
+
     fun init(){
-        fabData_pegawai_Tambah = findViewById(R.id.fabData_pegawai_Tambah)
+        fabLayanan_Tambah = findViewById(R.id.fabLayanan_Tambah)
     }
 
     fun tekan() {
-        fabData_pegawai_Tambah.setOnClickListener {
-            val intent = Intent(this, tambah_pegawai::class.java)
+        fabLayanan_Tambah.setOnClickListener {
+            val intent = Intent(this, tambah_layanan::class.java)
             startActivity(intent)
         }
     }
