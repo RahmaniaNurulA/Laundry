@@ -16,10 +16,17 @@
     <string name="idlayan">ID Layanan</string>
     <string name="nama_layan">Nama Layanan</string>
     <string name="harga_layan">Harga</string>
-    <string name="validasi_nama_Pelanggan">Nama tidak boleh kosong</string>
+    <string name="validasi_nama_Pelanggan">Nama Tidak Boleh kosong</string>
     <string name="validasi_alamat_pelanggan">Alamat Tidak Boleh Kosong</string>
-    <string name="validasi_nohp_pelanggan">No HP Tidak Boleh Kosong</string>
+    <string name="validasi_nohp_pelanggan">Nomor HP Tidak Boleh Kosong</string>
     <string name="validasi_cabang_pelanggan">Cabang Tidak Boleh Kosong</string>
     <string name="sukses_simpan_pelanggan">Data Berhasil Disimpan</string>
-    <string name="gagal_simpan_pelanggan">Data Tidak Berhasil Disimpan</string>
+    <string name="gagal_simpan_pelanggan">Data Gagal Disimpan</string>
+    <string name="validasi_nama_pegawai">Nama Tidak Boleh Kosong</string>
+    <string name="validasi_alamat_pegawai">Alamat Tidak Boleh Kosong</string>
+    <string name="validasi_daftar_pegawai">Terdaftar Tidak Boleh Kosong</string>
+    <string name="validasi_cabang_pegawai">Cabang Tidak Boleh Kosong</string>
+    <string name="validasi_nohp_pegawai">Nomor Hp Tidak Boleh Kosong</string>
+    <string name="sukses_simpan_pegawai">Data Berhasil Disimpan</string>
+    <string name="gagal_simpan_pegawai">Data Gagal Disimpan</string>
 </resources>

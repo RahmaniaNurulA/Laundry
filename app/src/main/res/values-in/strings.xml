@@ -3,7 +3,7 @@
     <string name="app_name">Laundry</string>
     <string name="idpel">ID Pelanggan</string>
     <string name="bthubungi">Hubungi</string>
-    <string name="btlihat">LIhat</string>
+    <string name="btlihat">Lihat</string>
     <string name="idpegawai">Pegawai</string>
     <string name="judulpel">Tambah Pelanggan</string>
     <string name="judulpeg">Tambah Pegawai</string>
@@ -19,8 +19,15 @@
     <string name="harga_layan">Harga</string>
     <string name="validasi_nama_Pelanggan">Nama Tidak Boleh Kosong</string>
     <string name="validasi_alamat_pelanggan">Alamat Tidak Boleh Kosong</string>
-    <string name="validasi_nohp_pelanggan">No HP Tidak Boleh Kosong</string>
+    <string name="validasi_nohp_pelanggan">Nomor HP Tidak Boleh Kosong</string>
     <string name="validasi_cabang_pelanggan">Cabang Tidak Boleh Kosong</string>
     <string name="sukses_simpan_pelanggan">Data Berhasil Disimpan</string>
-    <string name="gagal_simpan_pelanggan">Data Tidak Bisa Disimpan</string>
+    <string name="gagal_simpan_pelanggan">Data Gagal Disimpan</string>
+    <string name="validasi_nama_pegawai">Nama Tidak Boleh Kosong</string>
+    <string name="validasi_alamat_pegawai">Alamat Tidak Boleh Kosong</string>
+    <string name="validasi_daftar_pegawai">Terdaftar Tidak Boleh Kosong</string>
+    <string name="validasi_cabang_pegawai">Cabang Tidak Boleh Kosong</string>
+    <string name="validasi_nohp_pegawai">Nomor HP Tidak Boleh Kosong</string>
+    <string name="sukses_simpan_pegawai">Data Berhasil Disimpan</string>
+    <string name="gagal_simpan_pegawai">Data Gagal Disimpan</string>
 </resources>

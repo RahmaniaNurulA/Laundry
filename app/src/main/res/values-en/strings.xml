@@ -23,4 +23,11 @@
     <string name="validasi_cabang_pelanggan">Branches must not be empty</string>
     <string name="sukses_simpan_pelanggan">Data is saved successfully</string>
     <string name="gagal_simpan_pelanggan">Data fails to save</string>
+    <string name="validasi_nama_pegawai">Name must not be empty</string>
+    <string name="validasi_alamat_pegawai">Address must not be empty</string>
+    <string name="validasi_daftar_pegawai">Terdaftar must not be empty</string>
+    <string name="validasi_cabang_pegawai">Branches must not be empty</string>
+    <string name="validasi_nohp_pegawai">Phone must not be empty</string>
+    <string name="sukses_simpan_pegawai">Data is saved successfully</string>
+    <string name="gagal_simpan_pegawai">Data fails to save</string>
 </resources>

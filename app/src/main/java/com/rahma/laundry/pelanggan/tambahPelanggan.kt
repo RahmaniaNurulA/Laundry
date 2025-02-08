@@ -41,7 +41,7 @@ class tambahPelanggan : AppCompatActivity() {
         etNama = findViewById(R.id.etnamapel)
         etAlamat = findViewById(R.id.etalamatpel)
         etNoHP = findViewById(R.id.etnohppel)
-        etCabang = findViewById(R.id.etcabang)
+        etCabang = findViewById(R.id.etcabangpel)
         btSimpan = findViewById(R.id.btsimpanpel)
     }
     fun cekValidasi(){
@@ -57,28 +57,28 @@ class tambahPelanggan : AppCompatActivity() {
             return
         }
         if (alamat.isEmpty()){
-            etNama.error=this.getString(R.string.validasi_alamat_pelanggan)
+            etAlamat.error=this.getString(R.string.validasi_alamat_pelanggan)
             Toast.makeText(this, this.getString(R.string.validasi_alamat_pelanggan), Toast.LENGTH_SHORT).show()
-            etNama.requestFocus()
+            etAlamat.requestFocus()
             return
         }
         if (noHP.isEmpty()){
-            etNama.error=this.getString(R.string.validasi_nohp_pelanggan)
+            etNoHP.error=this.getString(R.string.validasi_nohp_pelanggan)
             Toast.makeText(this, this.getString(R.string.validasi_nohp_pelanggan), Toast.LENGTH_SHORT).show()
-            etNama.requestFocus()
+            etNoHP.requestFocus()
             return
         }
         if (cabang.isEmpty()) {
-            etNama.error = this.getString(R.string.validasi_cabang_pelanggan)
+            etCabang.error = this.getString(R.string.validasi_cabang_pelanggan)
             Toast.makeText(this, this.getString(R.string.validasi_cabang_pelanggan), Toast.LENGTH_SHORT).show()
-            etNama.requestFocus()
+            etCabang.requestFocus()
             return
         }
         simpan()
     }
     fun simpan(){
-        val pelanggganBaru = myRef.push()
-        val pelangganId = pelanggganBaru.key
+        val pelangganBaru = myRef.push()
+        val pelangganId = pelangganBaru.key
         val data = ModelPelanggan(
             pelangganId.toString(),
             etNama.text.toString(),
@@ -86,14 +86,13 @@ class tambahPelanggan : AppCompatActivity() {
             etNoHP.text.toString(),
             etCabang.text.toString()
         )
-        pelanggganBaru.setValue(data)
+        pelangganBaru.setValue(data)
             .addOnSuccessListener {
                 Toast.makeText(this, this.getString(R.string.sukses_simpan_pelanggan), Toast.LENGTH_SHORT).show()
                 finish()
             }
             .addOnFailureListener() {
                 Toast.makeText(this,this.getString(R.string.gagal_simpan_pelanggan), Toast.LENGTH_SHORT).show()
-                finish()
             }
     }
 }
