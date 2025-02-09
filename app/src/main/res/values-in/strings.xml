@@ -30,4 +30,7 @@
     <string name="validasi_nohp_pegawai">Nomor HP Tidak Boleh Kosong</string>
     <string name="sukses_simpan_pegawai">Data Berhasil Disimpan</string>
     <string name="gagal_simpan_pegawai">Data Gagal Disimpan</string>
+    <string name="validasi_nama_layanan">Nama Layanan Tidak Boleh Kosong</string>
+    <string name="validasi_harga_layanan">Harga Layanan Tidak Boleh Kosong</string>
+    <string name="validasi_cabang_layanan">Cabang Layanan Tidak Boleh Kosong</string>
 </resources>

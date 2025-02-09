@@ -30,4 +30,7 @@
     <string name="validasi_nohp_pegawai">Phone must not be empty</string>
     <string name="sukses_simpan_pegawai">Data is saved successfully</string>
     <string name="gagal_simpan_pegawai">Data fails to save</string>
+    <string name="validasi_nama_layanan">Service name must not be empty</string>
+    <string name="validasi_harga_layanan">Service price must not be empty</string>
+    <string name="validasi_cabang_layanan">Service branches must not be empty</string>
 </resources>

@@ -8,7 +8,7 @@
     tools:context=".layanan.tambah_layanan">
 
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/judullayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/judullayan"
@@ -20,26 +20,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"/>
     <TextView
-        android:id="@+id/tvnama"
+        android:id="@+id/tvnamalayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nama_layan"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/judul"
-        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/judullayan"
+        android:layout_marginTop="80dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
     <EditText
-        android:id="@+id/etnama"
+        android:id="@+id/etnamalayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nama_layan"
         android:background="@drawable/border_et"
         android:textSize="21dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/tvnama"
+        app:layout_constraintTop_toBottomOf="@id/tvnamalayan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="5dp"
@@ -47,26 +47,26 @@
         android:layout_marginEnd="20dp"/>
 
     <TextView
-        android:id="@+id/tvharga"
+        android:id="@+id/tvhargalayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/harga_layan"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etnama"
+        app:layout_constraintTop_toBottomOf="@id/etnamalayan"
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
     <EditText
-        android:id="@+id/etharga"
+        android:id="@+id/ethargalayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_et"
         android:hint="@string/harga_layan"
         android:textColor="@color/black"
         android:textSize="21dp"
-        app:layout_constraintTop_toBottomOf="@id/tvharga"
+        app:layout_constraintTop_toBottomOf="@id/tvhargalayan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="5dp"
@@ -74,26 +74,26 @@
         android:layout_marginEnd="20dp"/>
 
     <TextView
-        android:id="@+id/tvcabang"
+        android:id="@+id/tvcabanglayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/cabang"
         android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etharga"
+        app:layout_constraintTop_toBottomOf="@id/ethargalayan"
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
     <EditText
-        android:id="@+id/etcabang"
+        android:id="@+id/etcabanglayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/cabang"
         android:textSize="21dp"
         android:textColor="@color/black"
         android:background="@drawable/border_et"
-        app:layout_constraintTop_toBottomOf="@id/tvcabang"
+        app:layout_constraintTop_toBottomOf="@id/tvcabanglayan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="5dp"
@@ -101,14 +101,19 @@
         android:layout_marginEnd="20dp"/>
 
     <Button
+        android:id="@+id/btsimpanlayan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etcabang"
-        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/etcabanglayan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="#000957"
+        android:textColor="@color/white"
         android:text="@string/btsimpan"
         android:textSize="24dp"/>
 
