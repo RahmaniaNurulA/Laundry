@@ -33,4 +33,7 @@
     <string name="validasi_nama_layanan">Service name must not be empty</string>
     <string name="validasi_harga_layanan">Service price must not be empty</string>
     <string name="validasi_cabang_layanan">Service branches must not be empty</string>
+    <string name="judultambahan">Additional</string>
+    <string name="namatambahan">Additional name</string>
+    <string name="idtambahan">Additional ID</string>
 </resources>

@@ -18,6 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#000957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvnamapel"
             app:layout_constraintTop_toTopOf="parent"
             app:cardBackgroundColor="@color/black"
             app:layout_constraintStart_toStartOf="parent">
@@ -44,6 +46,7 @@
             android:layout_height="wrap_content"
             android:text="Nama Pelanggan"
             android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@id/tvalamatpel"
             app:layout_constraintTop_toBottomOf="@id/cvidpel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +59,7 @@
             android:layout_height="wrap_content"
             android:text="Alamat"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/tvnohppel"
             app:layout_constraintTop_toBottomOf="@id/tvnamapel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,6 +72,7 @@
             android:layout_height="wrap_content"
             android:text="No HP"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/tvcabangpel"
             app:layout_constraintTop_toBottomOf="@id/tvalamatpel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +85,7 @@
             android:layout_height="wrap_content"
             android:text="Nama Cabang"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/bthubungipel"
             app:layout_constraintTop_toBottomOf="@id/tvnohppel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -97,6 +103,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvcabangpel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btlihatpel"
             android:layout_marginStart="30dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"/>
@@ -108,11 +115,13 @@
             android:backgroundTint="#000957"
             android:textColor="@color/white"
             android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvcabangpel"
             app:layout_constraintStart_toEndOf="@id/bthubungipel"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="30dp"
             android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

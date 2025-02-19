@@ -33,6 +33,12 @@
             android:name=".pelanggan.datapelanggan"
             android:exported="false" />
         <activity
+            android:name=".tambahan.data_tambahan"
+            android:exported="false" />
+        <activity
+            android:name=".tambahan.tambah_tambahan"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

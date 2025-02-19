@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.rahma.laundry.layanan.data_layanan
 import com.rahma.laundry.pegawai.data_pegawai
 import com.rahma.laundry.pegawai.tambah_pegawai
 import com.rahma.laundry.pelanggan.datapelanggan
 import com.rahma.laundry.pelanggan.tambahPelanggan
+import com.rahma.laundry.tambahan.data_tambahan
 import java.util.Calendar
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var ipelanggan: ImageButton
     lateinit var ipegawai: ImageButton
     lateinit var ilayan: ImageButton
+    lateinit var itambah: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         ipelanggan = findViewById(R.id.ipelanggan)
         ipegawai = findViewById(R.id.ipegawai)
         ilayan = findViewById(R.id.ilayan)
+        itambah = findViewById(R.id.itambah)
     }
 
     fun tekan() {
@@ -62,6 +66,10 @@ class MainActivity : AppCompatActivity() {
         }
         ilayan.setOnClickListener {
             val intent = Intent(this, data_layanan::class.java)
+            startActivity(intent)
+        }
+        itambah.setOnClickListener {
+            val intent = Intent(this, data_tambahan::class.java)
             startActivity(intent)
         }
     }

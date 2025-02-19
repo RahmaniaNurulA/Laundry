@@ -33,4 +33,7 @@
     <string name="validasi_nama_layanan">Nama Layanan Tidak Boleh Kosong</string>
     <string name="validasi_harga_layanan">Harga Layanan Tidak Boleh Kosong</string>
     <string name="validasi_cabang_layanan">Cabang Layanan Tidak Boleh Kosong</string>
+    <string name="judultambahan">Tambahan</string>
+    <string name="namatambahan">Nama tambahan</string>
+    <string name="idtambahan">ID Tambahan</string>
 </resources>
