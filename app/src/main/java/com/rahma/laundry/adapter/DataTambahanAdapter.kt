@@ -27,7 +27,7 @@ class DataTambahanAdapter(
         val item = ListTambahan[position]
         holder.tvidtambah.text = item.tvidtambah
         holder.tvtambahan.text = item.tvtambahan
-        holder.tvharga.text = item.tvhargatambah
+        holder.tvharga.text = item.tvhargatambahan
         holder.tvcabang.text = item.tvcabangtambahan
         holder.cvtambahan.setOnClickListener{
 
@@ -41,8 +41,8 @@ class DataTambahanAdapter(
         val cvtambahan = itemView.findViewById<CardView>(R.id.cvtambahan)
         val tvidtambah = itemView.findViewById<TextView>(R.id.tvidtambah)
         val tvtambahan = itemView.findViewById<TextView>(R.id.tvtambahan)
-        val tvharga = itemView.findViewById<TextView>(R.id.tvhargatambah)
-        val tvcabang = itemView.findViewById<TextView>(R.id.tvcabangtambah)
+        val tvharga = itemView.findViewById<TextView>(R.id.tvhargatambahan)
+        val tvcabang = itemView.findViewById<TextView>(R.id.tvcabangtambahan)
     }
 
 }
