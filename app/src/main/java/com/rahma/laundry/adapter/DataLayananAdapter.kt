@@ -28,8 +28,8 @@ class DataLayananAdapter(
         val item = ListLayanan[position]
         holder.idlayanan.text = item.tvidlayan
         holder.tvnamalayanan.text = item.tvlayanan
-        holder.tvharga.text = item.tvhargalayan
-        holder.tvcabang.text = item.tvcabanglayan
+        holder.tvharga.text = "Harga = ${item.tvhargalayan}"
+        holder.tvcabang.text = "Cabang = ${item.tvcabanglayan}"
         holder.cvlayanan.setOnClickListener{
 
         }

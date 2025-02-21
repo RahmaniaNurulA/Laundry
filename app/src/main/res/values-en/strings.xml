@@ -36,4 +36,7 @@
     <string name="judultambahan">Additional</string>
     <string name="namatambahan">Additional name</string>
     <string name="idtambahan">Additional ID</string>
+    <string name="validasi_nama_tambahan">Additional name must not be empty</string>
+    <string name="validasi_harga_tambahan">Additional price must not be empty</string>
+    <string name="validasi_cabang_tambahan">Additional branches must not be empty</string>
 </resources>

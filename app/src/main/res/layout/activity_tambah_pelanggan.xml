@@ -98,6 +98,8 @@
         android:hint="@string/nohp"
         android:textSize="22dp"
         android:textColor="@color/black"
+        android:maxLength="14"
+        android:inputType="phone"
         android:background="@drawable/border_et"
         app:layout_constraintBottom_toTopOf="@id/tvcabangpel"
         app:layout_constraintTop_toBottomOf="@id/tvnohp"

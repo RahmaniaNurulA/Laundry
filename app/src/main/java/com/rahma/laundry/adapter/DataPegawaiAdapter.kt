@@ -27,10 +27,10 @@ class DataPegawaiAdapter(
         val item = ListPegawai[position]
         holder.idpegawai.text = item.idpeg
         holder.tvnama.text = item.tvnamapeg
-        holder.tvalamat.text = item.tvalamatpeg
-        holder.tvterdaftar.text = item.tvterdaftarpeg
-        holder.tvnohp.text = item.tvnohppeg
-        holder.tvcabang.text = item.tvcabangpeg
+        holder.tvalamat.text = "Alamat = ${item.tvalamatpeg}"
+        holder.tvterdaftar.text = "Terdaftar = ${item.tvterdaftarpeg}"
+        holder.tvnohp.text = "No HP = ${item.tvnohppeg}"
+        holder.tvcabang.text = "Cabang = ${item.tvcabangpeg}"
         holder.cvpegawai.setOnClickListener{
 
         }

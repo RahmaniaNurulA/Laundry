@@ -13,7 +13,8 @@ import com.rahma.laundry.modeldata.ModelPelanggan
 
 
 class DataPelangganAdapter(
-    private val ListPelanggan:ArrayList<ModelPelanggan>) : RecyclerView.Adapter<DataPelangganAdapter.ViewHolder>(){
+    private val ListPelanggan:ArrayList<ModelPelanggan>) :
+    RecyclerView.Adapter<DataPelangganAdapter.ViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -27,9 +28,9 @@ class DataPelangganAdapter(
         val item = ListPelanggan[position]
         holder.idpelanggan.text = item.idpel
         holder.tvnama.text = item.tvnamapel
-        holder.tvalamat.text = item.tvalamatpel
-        holder.tvnohp.text = item.tvnohppel
-        holder.tvcabang.text = item.tvcabangpel
+        holder.tvalamat.text = "Alamat = ${item.tvalamatpel}"
+        holder.tvnohp.text = "No HP = ${item.tvnohppel}"
+        holder.tvcabang.text = "Cabang = ${item.tvcabangpel}"
         holder.cvpelanggan.setOnClickListener{
 
         }

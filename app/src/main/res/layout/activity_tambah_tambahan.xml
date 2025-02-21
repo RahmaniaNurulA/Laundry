@@ -69,6 +69,7 @@
         android:background="@drawable/border_et"
         android:hint="@string/harga_layan"
         android:textColor="@color/black"
+        android:inputType="numberDecimal"
         android:textSize="21dp"
         app:layout_constraintBottom_toTopOf="@id/tvcabangtambah"
         app:layout_constraintTop_toBottomOf="@id/tvhargatambah"

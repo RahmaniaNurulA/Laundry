@@ -35,4 +35,7 @@
     <string name="judultambahan">Tambahan</string>
     <string name="namatambahan">Nama Tambahan</string>
     <string name="idtambahan">ID Tambahan</string>
+    <string name="validasi_nama_tambahan">Nama Tambahan Tidak Boleh Kosong</string>
+    <string name="validasi_harga_tambahan">Harga Tambahan Tidak Boleh Kosong</string>
+    <string name="validasi_cabang_tambahan">Nama Cabang Tambahan Tidak Boleh Kosong</string>
 </resources>

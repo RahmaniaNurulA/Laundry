@@ -27,8 +27,8 @@ class DataTambahanAdapter(
         val item = ListTambahan[position]
         holder.tvidtambah.text = item.tvidtambah
         holder.tvtambahan.text = item.tvtambahan
-        holder.tvharga.text = item.tvhargatambahan
-        holder.tvcabang.text = item.tvcabangtambahan
+        holder.tvharga.text = "Harga = ${item.tvhargatambahan}"
+        holder.tvcabang.text = "Cabang = ${item.tvcabangtambahan}"
         holder.cvtambahan.setOnClickListener{
 
         }

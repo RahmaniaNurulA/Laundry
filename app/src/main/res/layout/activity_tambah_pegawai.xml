@@ -154,6 +154,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/nohp"
         android:textSize="21dp"
+        android:maxLength="14"
+        android:inputType="phone"
         android:textColor="@color/black"
         android:background="@drawable/border_et"
         app:layout_constraintBottom_toTopOf="@id/btsimpanpeg"

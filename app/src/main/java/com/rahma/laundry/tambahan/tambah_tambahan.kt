@@ -50,20 +50,20 @@ class tambah_tambahan : AppCompatActivity() {
         val cabang = etCabang.text.toString()
         //validasi data
         if (nama.isEmpty()){
-            etNamatambahan.error=this.getString(R.string.validasi_nama_layanan)
-            Toast.makeText(this, this.getString(R.string.validasi_nama_layanan), Toast.LENGTH_SHORT).show()
+            etNamatambahan.error=this.getString(R.string.validasi_nama_tambahan)
+            Toast.makeText(this, this.getString(R.string.validasi_nama_tambahan), Toast.LENGTH_SHORT).show()
             etNamatambahan.requestFocus()
             return
         }
         if (harga.isEmpty()){
-            etHarga.error=this.getString(R.string.validasi_harga_layanan)
-            Toast.makeText(this, this.getString(R.string.validasi_harga_layanan), Toast.LENGTH_SHORT).show()
+            etHarga.error=this.getString(R.string.validasi_harga_tambahan)
+            Toast.makeText(this, this.getString(R.string.validasi_harga_tambahan), Toast.LENGTH_SHORT).show()
             etHarga.requestFocus()
             return
         }
         if (cabang.isEmpty()) {
-            etCabang.error = this.getString(R.string.validasi_cabang_layanan)
-            Toast.makeText(this, this.getString(R.string.validasi_cabang_layanan), Toast.LENGTH_SHORT).show()
+            etCabang.error = this.getString(R.string.validasi_cabang_tambahan)
+            Toast.makeText(this, this.getString(R.string.validasi_cabang_tambahan), Toast.LENGTH_SHORT).show()
             etCabang.requestFocus()
             return
         }
