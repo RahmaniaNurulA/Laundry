@@ -32,11 +32,22 @@ class data_pegawai : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.reverseLayout = true
         layoutManager.stackFromEnd = true
-        rvdatapegawai.layoutManager=layoutManager
+        rvdatapegawai.layoutManager = layoutManager
         rvdatapegawai.setHasFixedSize(true)
         pegawaiList = arrayListOf<ModelPegawai>()
-        tekan()
         getData()
+
+        fabData_Pegawai_Tambah.setOnClickListener {
+            val intent = Intent(this, tambah_pegawai::class.java)
+            intent.putExtra("judulpeg", this.getString(R.string.judulpeg))
+            intent.putExtra("idpeg", "")
+            intent.putExtra("tvnamapeg", "")
+            intent.putExtra("tvalamatpeg", "")
+            intent.putExtra("tvterdaftarpeg", "")
+            intent.putExtra("tvcabangpeg", "")
+            intent.putExtra("tvnohppeg", "")
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -44,37 +55,30 @@ class data_pegawai : AppCompatActivity() {
         }
     }
 
-    fun init() {
-        rvdatapegawai = findViewById(R.id.rvDataPegawai)
-        fabData_Pegawai_Tambah = findViewById(R.id.fabData_pegawai_Tambah)
-    }
-
-    fun getData(){
-        val query = myRef.orderByChild("idPegawai").limitToLast(100)
-        query.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
-                    pegawaiList.clear()
-                    for(dataSnapshot in snapshot.children){
-                        val pegawai = dataSnapshot.getValue(ModelPegawai::class.java)
-                        pegawaiList.add(pegawai!!)
-                    }
-                    val adapter = DataPegawaiAdapter(pegawaiList)
-                    rvdatapegawai.adapter = adapter
-                    adapter.notifyDataSetChanged()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@data_pegawai, error.message, Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
-
-    fun tekan() {
-        fabData_Pegawai_Tambah.setOnClickListener {
-            val intent = Intent(this, tambah_pegawai::class.java)
-            startActivity(intent)
+        fun init() {
+            rvdatapegawai = findViewById(R.id.rvDataPegawai)
+            fabData_Pegawai_Tambah = findViewById(R.id.fabData_pegawai_Tambah)
         }
-    }
+
+        fun getData() {
+            val query = myRef.orderByChild("idPegawai").limitToLast(100)
+            query.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        pegawaiList.clear()
+                        for (dataSnapshot in snapshot.children) {
+                            val pegawai = dataSnapshot.getValue(ModelPegawai::class.java)
+                            pegawaiList.add(pegawai!!)
+                        }
+                        val adapter = DataPegawaiAdapter(pegawaiList)
+                        rvdatapegawai.adapter = adapter
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(this@data_pegawai, error.message, Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
 }

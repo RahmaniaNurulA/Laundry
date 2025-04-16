@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.rahma.laundry.cabang.data_cabang
 import com.rahma.laundry.layanan.data_layanan
 import com.rahma.laundry.pegawai.data_pegawai
 import com.rahma.laundry.pegawai.tambah_pegawai
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var ipegawai: ImageButton
     lateinit var ilayan: ImageButton
     lateinit var itambah: ImageButton
+    lateinit var icabang: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +40,9 @@ class MainActivity : AppCompatActivity() {
         val currentDate = Date()
 
         val greeting = when (hour) {
-            in 0..11 -> "Selamat Pagi"
-            in 12..17 -> "Selamat Siang"
-            else -> "Selamat Malam"
+            in 0..11 -> this.getString(R.string.pagi)
+            in 12..17 -> this.getString(R.string.siang)
+            else -> this.getString(R.string.malam)
         }
 
         haloTextView.text = "$greeting Rahmania"
@@ -53,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         ipegawai = findViewById(R.id.ipegawai)
         ilayan = findViewById(R.id.ilayan)
         itambah = findViewById(R.id.itambah)
+        icabang = findViewById(R.id.icabang)
     }
 
     fun tekan() {
@@ -70,6 +73,10 @@ class MainActivity : AppCompatActivity() {
         }
         itambah.setOnClickListener {
             val intent = Intent(this, data_tambahan::class.java)
+            startActivity(intent)
+        }
+        icabang.setOnClickListener {
+            val intent = Intent(this, data_cabang::class.java)
             startActivity(intent)
         }
     }

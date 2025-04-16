@@ -39,4 +39,12 @@
     <string name="validasi_nama_tambahan">Additional name must not be empty</string>
     <string name="validasi_harga_tambahan">Additional price must not be empty</string>
     <string name="validasi_cabang_tambahan">Additional branches must not be empty</string>
+    <string name="editpegawai">Rename Staff</string>
+    <string name="pagi">Good Morning</string>
+    <string name="siang">Good Afternoon</string>
+    <string name="malam">Good Night</string>
+    <string name="judulcabang">Branch</string>
+    <string name="nama_cabang">Branch name</string>
+    <string name="kontakcabang">Branch telephone number</string>
+    <string name="alamatcabang">Branch Address</string>
 </resources>

@@ -39,4 +39,12 @@
     <string name="validasi_nama_tambahan">Nama tambahan tidak boleh kosong</string>
     <string name="validasi_harga_tambahan">Harga tambahan tidak boleh kosong</string>
     <string name="validasi_cabang_tambahan">Nama cabang tambahan tidak boleh kosong</string>
+    <string name="editpegawai">Edit Pegawai</string>
+    <string name="pagi">Selamat Pagi</string>
+    <string name="siang">Selamat Siang</string>
+    <string name="malam">Selamat Malam</string>
+    <string name="judulcabang">Cabang</string>
+    <string name="nama_cabang">Nama Cabang</string>
+    <string name="kontakcabang">Nomor telepon cabang</string>
+    <string name="alamatcabang">Alamat Cabang</string>
 </resources>
