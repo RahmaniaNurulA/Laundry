@@ -77,6 +77,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@color/black"/>
 
+        <ImageView
+            android:id="@+id/gambar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/laporan"
+            app:layout_constraintTop_toBottomOf="@id/garis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/namalayanan"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"/>
         <TextView
             android:id="@+id/namalayanan"
             android:layout_width="wrap_content"
@@ -85,7 +96,10 @@
             android:text="Cuci"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="250dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@id/gambar"
             app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
             android:id="@+id/tambahanlayan"
@@ -94,7 +108,10 @@
             app:layout_constraintTop_toBottomOf="@id/namalayanan"
             android:text="tambahan"
             android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="205dp"
+            app:layout_constraintStart_toEndOf="@id/gambar"
             app:layout_constraintEnd_toEndOf="parent"/>
         <View
             android:id="@+id/garis2"
@@ -131,7 +148,7 @@
             app:layout_constraintTop_toBottomOf="@id/garis2"
             app:layout_constraintStart_toEndOf="@id/total"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="140dp"/>
+            android:layout_marginStart="130dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -18,8 +18,8 @@
 
     <View
         android:id="@+id/kotak"
-        android:layout_width="match_parent"
-        android:layout_height="370dp"
+        android:layout_width="370dp"
+        android:layout_height="match_parent"
         android:background="#8815ED23"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -63,23 +63,23 @@
         android:text="No HP"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/kotak"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/kotak"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="65dp"/>
     <EditText
         android:id="@+id/etnohplog"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:hint="No HP"
         android:textSize="20sp"
         android:background="@drawable/border_et"
         app:layout_constraintTop_toBottomOf="@id/tvnohplog"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/kotak"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/tvpassword"
@@ -89,30 +89,30 @@
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/etnohplog"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/kotak"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="40dp"/>
     <EditText
         android:id="@+id/etpassword"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20sp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:hint="Password"
         android:textSize="20sp"
         android:background="@drawable/border_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/kotak"
         app:layout_constraintTop_toBottomOf="@id/tvpassword" />
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text="Login"
         android:backgroundTint="#8815ED23"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/etpassword"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/kotak"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
