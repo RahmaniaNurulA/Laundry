@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
+            android:name=".transaksi.Pilih_Layanan"
+            android:exported="false" />
+        <activity
+            android:name=".transaksi.Pilih_Pelanggan"
+            android:exported="false" />
+        <activity
+            android:name=".transaksi.Transaksi"
+            android:exported="false" />
+        <activity
             android:name=".data_laporan"
             android:exported="false" />
         <activity

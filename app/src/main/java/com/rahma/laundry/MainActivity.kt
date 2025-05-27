@@ -14,6 +14,7 @@ import com.rahma.laundry.pegawai.tambah_pegawai
 import com.rahma.laundry.pelanggan.datapelanggan
 import com.rahma.laundry.pelanggan.tambahPelanggan
 import com.rahma.laundry.tambahan.data_tambahan
+import com.rahma.laundry.transaksi.Transaksi
 import java.util.Calendar
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var ilayan: ImageButton
     lateinit var itambah: ImageButton
     lateinit var icabang: ImageButton
+    lateinit var itransaksi: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         ilayan = findViewById(R.id.ilayan)
         itambah = findViewById(R.id.itambah)
         icabang = findViewById(R.id.icabang)
+        itransaksi = findViewById(R.id.itransaksi)
     }
 
     fun tekan() {
@@ -77,6 +80,10 @@ class MainActivity : AppCompatActivity() {
         }
         icabang.setOnClickListener {
             val intent = Intent(this, data_cabang::class.java)
+            startActivity(intent)
+        }
+        itransaksi.setOnClickListener {
+            val intent = Intent(this, Transaksi::class.java)
             startActivity(intent)
         }
     }
