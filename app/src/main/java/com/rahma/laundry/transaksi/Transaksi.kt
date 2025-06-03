@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.FirebaseApp
 import com.rahma.laundry.R
+import com.rahma.laundry.adapter.TransaksiTambahanAdapter
 import com.rahma.laundry.modeldata.ModelTransaksiTambahan
 
 class Transaksi : AppCompatActivity() {
@@ -26,6 +27,8 @@ class Transaksi : AppCompatActivity() {
     private lateinit var tvLayananNama : TextView
     private lateinit var tvLayananHarga : TextView
     private lateinit var rvLayananTambahan : RecyclerView
+    private lateinit var tvnamatambahan : TextView
+    private lateinit var tvhargatambahan : TextView
     private val dataList = mutableListOf<ModelTransaksiTambahan>()
 
     private val pilihPelanggan = 1
@@ -39,8 +42,12 @@ class Transaksi : AppCompatActivity() {
     private var idLayanan:String=""
     private var namaLayanan:String=""
     private var hargaLayanan:String=""
+    private var namaTambahan:String=""
+    private var hargaTambahan:String=""
     private var idPegawai:String=""
+    private var idTambahan:String=""
     private lateinit var sharedPref: SharedPreferences
+    private lateinit var tambahanAdapter: TransaksiTambahanAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -49,19 +56,28 @@ class Transaksi : AppCompatActivity() {
         idCabang = sharedPref.getString("idCabang", null).toString()
         idPegawai = sharedPref.getString("idPegawai", null).toString()
         init()
+
         FirebaseApp.initializeApp(this)
         val layoutManager = LinearLayoutManager(this)
         layoutManager.reverseLayout = false
         rvLayananTambahan.layoutManager = layoutManager
         rvLayananTambahan.setHasFixedSize(true)
+        tambahanAdapter = TransaksiTambahanAdapter(dataList)
+        rvLayananTambahan.adapter = tambahanAdapter
+
         btPilihPelanggan.setOnClickListener{
-            val intent = Intent(this, Pilih_Pelanggan::class.java)
+            val intent = Intent( this, Pilih_Pelanggan::class.java)
             startActivityForResult(intent,pilihPelanggan)
         }
         btPilihLayanan.setOnClickListener{
             val intent = Intent(this, Pilih_Layanan::class.java)
             startActivityForResult(intent,pilihLayanan)
         }
+        btTambahan.setOnClickListener{
+            val intent = Intent(this, Pilih_Tambahan::class.java)
+            startActivityForResult(intent,pilihTambahan)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -77,7 +93,7 @@ class Transaksi : AppCompatActivity() {
         tvPelangganNohp = findViewById(R.id.tvnohp_transaksi)
         tvLayananNama = findViewById(R.id.tvnamalayan_transaksi)
         tvLayananHarga = findViewById(R.id.tvharga_transaksi)
-        rvLayananTambahan = findViewById(R.id.rvlayanantambahan)
+        rvLayananTambahan = findViewById(R.id.rvtransaksiTambahan)
     }
 
     @Deprecated("This method has been deprecated in favor of using the Activity Result")
@@ -111,5 +127,19 @@ class Transaksi : AppCompatActivity() {
                 Toast.makeText(this, "Batal Memilih Layanan", Toast.LENGTH_SHORT).show()
             }
         }
+
+        if (requestCode == pilihTambahan) {
+            if (resultCode == RESULT_OK && data != null) {
+                idTambahan = data.getStringExtra("nomor").toString()
+                val namatambahan = data.getStringExtra("nama").toString()
+                val harga = data.getStringExtra("harga").toString()
+
+                val modelTambahan = ModelTransaksiTambahan(idTambahan, namatambahan, harga)
+                dataList.add(modelTambahan)
+
+                tambahanAdapter.notifyDataSetChanged()
+            }
+            }
+        }
+
     }
-}

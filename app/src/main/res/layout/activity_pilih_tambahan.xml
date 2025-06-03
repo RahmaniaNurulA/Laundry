@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".transaksi.Pilih_Layanan">
+    tools:context=".transaksi.Pilih_Tambahan">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,33 +17,32 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/svlayanan"
+            android:id="@+id/svtambahan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:queryHint="Cari data layanan"
+            android:queryHint="Cari data tambahan"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"/>
 
         <TextView
-            android:id="@+id/tvPilih_Layanan_Kosong"
+            android:id="@+id/tvPilih_Tambahan_Kosong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Layanan Kosong"
+            android:text="Data Pelanggan Kosong"
             android:visibility="gone"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvPilihLayanan"
+            android:id="@+id/rvPilihTambahan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            tools:listitem="@layout/cardpilih_layanan">
+            tools:listitem="@layout/card_pilih_tambahan">
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

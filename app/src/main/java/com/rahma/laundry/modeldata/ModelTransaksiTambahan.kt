@@ -1,7 +1,7 @@
 package com.rahma.laundry.modeldata
 
-class ModelTransaksiTambahan (
-    val id : String,
-    val nama : String,
-    val nohp : String,
+data class ModelTransaksiTambahan(
+    val nomortambahan: String,
+    val namatambahan: String,
+    val hargatambahan: String
 )

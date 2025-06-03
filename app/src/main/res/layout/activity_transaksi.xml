@@ -112,10 +112,10 @@
         android:layout_marginBottom="5dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvlayanantambahan"
+            android:id="@+id/rvtransaksiTambahan"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            tools:listitem="@layout/carddata_layanan">
+            tools:listitem="@layout/card_tampil_tambahan">
 
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.core.widget.NestedScrollView>
