@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
+            android:name=".cetakPembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".BottomSheetPembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".KonfirmasiData"
+            android:exported="false" />
+        <activity
             android:name=".item_layanan_tambahan"
             android:exported="false" />
         <activity

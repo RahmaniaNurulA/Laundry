@@ -1,5 +1,6 @@
 package com.rahma.laundry.transaksi
 
+import ModelTransaksiTambahan
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -13,9 +14,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.FirebaseApp
+import com.rahma.laundry.KonfirmasiData
 import com.rahma.laundry.R
 import com.rahma.laundry.adapter.TransaksiTambahanAdapter
-import com.rahma.laundry.modeldata.ModelTransaksiTambahan
 
 class Transaksi : AppCompatActivity() {
     private lateinit var btPilihPelanggan: Button
@@ -34,6 +35,7 @@ class Transaksi : AppCompatActivity() {
     private val pilihPelanggan = 1
     private val pilihLayanan = 2
     private val pilihTambahan = 3
+    private val konfirmasiData = 4
 
     private var idPelanggan: String=""
     private var idCabang: String=""
@@ -76,6 +78,22 @@ class Transaksi : AppCompatActivity() {
         btTambahan.setOnClickListener{
             val intent = Intent(this, Pilih_Tambahan::class.java)
             startActivityForResult(intent,pilihTambahan)
+        }
+
+        btProses.setOnClickListener {
+            val intent = Intent(this, KonfirmasiData::class.java)
+
+            // Data pelanggan
+            intent.putExtra("namaPelanggan", namaPelanggan)
+            intent.putExtra("noHp", noHp)
+
+            // Data layanan utama
+            intent.putExtra("namaLayanan", namaLayanan)
+            intent.putExtra("hargaLayanan", hargaLayanan)
+
+            // Kirim seluruh list layanan tambahan (dataList) sebagai ArrayList Parcelable
+            intent.putParcelableArrayListExtra("listTambahan", ArrayList(dataList) )
+                    startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -139,7 +157,8 @@ class Transaksi : AppCompatActivity() {
 
                 tambahanAdapter.notifyDataSetChanged()
             }
-            }
         }
 
     }
+
+}
