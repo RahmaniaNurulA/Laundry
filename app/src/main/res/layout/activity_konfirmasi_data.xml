@@ -138,7 +138,7 @@
                     android:text="Total Bayar"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="40dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
