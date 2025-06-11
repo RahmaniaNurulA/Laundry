@@ -12,6 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
 import com.rahma.laundry.R
 import com.rahma.laundry.modeldata.ModelPelanggan
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class tambahPelanggan : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -22,11 +25,14 @@ class tambahPelanggan : AppCompatActivity() {
     lateinit var etNoHP: EditText
     lateinit var etCabang: EditText
     lateinit var btSimpan: Button
+
+    var idPelanggan:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_pelanggan)
         init()
+        getData()
         btSimpan.setOnClickListener{
             cekValidasi()
         }
@@ -74,7 +80,79 @@ class tambahPelanggan : AppCompatActivity() {
             etCabang.requestFocus()
             return
         }
-        simpan()
+        if (btSimpan.text.equals("Simpan")){
+            simpan()
+        }else if (btSimpan.text.equals("Sunting")){
+            hidup()
+            etNama.requestFocus()
+            btSimpan.text="Perbarui"
+        }else if (btSimpan.text.equals("Perbarui")){
+            update()
+        }
+    }
+
+    fun getData(){
+        idPelanggan = intent.getStringExtra("idpel").toString()
+        val judul = intent.getStringExtra("judulpel")
+        val nama = intent.getStringExtra("tvnamapel")
+        val alamat = intent.getStringExtra("tvalamatpel")
+        val nohp = intent.getStringExtra("tvnohppel")
+        val cabang = intent.getStringExtra("tvcabangpel")
+
+        tvJudul.text = judul
+        etNama.setText(nama)
+        etAlamat.setText(alamat)
+        etNoHP.setText(nohp)
+        etCabang.setText(cabang)
+        if (!tvJudul.text.equals(this.getString(R.string.judulpel))){
+            if (judul.equals("Edit Pelanggan")){
+                mati()
+                btSimpan.text = "Sunting"
+            }
+        }else{
+            hidup()
+            etNama.requestFocus()
+            btSimpan.text="Simpan"
+        }
+    }
+
+    fun mati(){
+        etNama.isEnabled=false
+        etAlamat.isEnabled=false
+        etNoHP.isEnabled=false
+        etCabang.isEnabled=false
+    }
+
+    fun hidup(){
+        etNama.isEnabled=true
+        etAlamat.isEnabled=true
+        etNoHP.isEnabled=true
+        etCabang.isEnabled=true
+    }
+
+    fun update(){
+        val pelangganRef =  database.getReference("pelanggan").child(idPelanggan)
+        val data = ModelPelanggan(
+            idPelanggan,
+            etNama.text.toString(),
+            etAlamat.text.toString(),
+            etCabang.text.toString(),
+            etNoHP.text.toString(),
+
+        )
+
+        val updateData = mutableMapOf<String,Any>()
+        updateData["tvnamapel"] = data.tvnamapel.toString()
+        updateData["tvalamatpel"] = data.tvalamatpel.toString()
+        updateData["tvnohppel"] = data.tvnohppel.toString()
+        updateData["tvcabangpel"] = data.tvcabangpel.toString()
+        pelangganRef.setValue(data).addOnSuccessListener {
+            Toast.makeText(this@tambahPelanggan,"Data Pelanggan Berhasil Diperbarui",Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this@tambahPelanggan,"Data Pelanggan Gagal Diperbarui",Toast.LENGTH_SHORT).show()
+        }
+
     }
     fun simpan(){
         val pelangganBaru = myRef.push()
@@ -84,7 +162,7 @@ class tambahPelanggan : AppCompatActivity() {
             etNama.text.toString(),
             etAlamat.text.toString(),
             etNoHP.text.toString(),
-            etCabang.text.toString()
+            etCabang.text.toString(),
         )
         pelangganBaru.setValue(data)
             .addOnSuccessListener {

@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permission untuk Android 12+ -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Feature declaration -->
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -18,13 +25,7 @@
             android:name=".cetakPembayaran"
             android:exported="false" />
         <activity
-            android:name=".BottomSheetPembayaran"
-            android:exported="false" />
-        <activity
             android:name=".KonfirmasiData"
-            android:exported="false" />
-        <activity
-            android:name=".item_layanan_tambahan"
             android:exported="false" />
         <activity
             android:name=".transaksi.Pilih_Tambahan"
